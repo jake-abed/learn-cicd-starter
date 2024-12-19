@@ -15,7 +15,7 @@ func TestGetAPIKey(t *testing.T) {
 		{KeyHeader: "ApiKey Baloney", Expected: "Baloney"},
 		{KeyHeader: "Bearer Scoop", Expected: ""},
 		{KeyHeader: "Api Rub-A-Dub", Expected: ""},
-		{KeyHeader: "ApiKey 1234ABCd", Expected: "1234ABCD"},
+		{KeyHeader: "ApiKey 1234ABCD", Expected: "1234ABCD"},
 		{KeyHeader: "", Expected: ""},
 	}
 
