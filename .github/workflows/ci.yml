@@ -19,7 +19,7 @@ jobs:
           go-version: "1.23.0"
 
       - name: Run all tests!
-        run: go test./...
+        run: go test ./...
 
       - name: Exit Happily!
         run: (exit 0)
