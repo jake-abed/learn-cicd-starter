@@ -32,4 +32,7 @@ jobs:
           version: '>= 504.0.1'
 
       - name: Push to Google Artifact Registry
-        run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-3116969/notely-ar-repo/notely:latest 
+        run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-3116969/notely-ar-repo/notely:latest
+
+      - name: Deploy to Cloud Run
+        run: gcloud run deploy notely us-central1-docker.pkg.dev/notely-3116969/notely-ar-repo/notely:latest us-central1 --allow-unauthenticated --project notely --max-instances=4
